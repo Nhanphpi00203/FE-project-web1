@@ -4,7 +4,7 @@ const LandingPage = () => {
   return (
     <div>
       {/* <Homepages /> */}
-      <div className="text-[30px]">HI</div>
+      <div className="text-[30px] text-red-400">HI</div>
     </div>
   )
 }
