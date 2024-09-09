@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 const LandingPage = lazy(() => import('../pages/LandingPage'))
-const MyAccount = lazy(() => import('../pages/User/MyAccount'))
+const MyAccount = lazy(() => import('../pages/User/myAccount'))
 export default function AppRoutes() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
