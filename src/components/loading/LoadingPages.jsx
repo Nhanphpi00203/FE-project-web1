@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-import BarLoader from "react-spinners/BarLoader";
-
+import BarLoader from 'react-spinners/BarLoader'
 
 export default function LoadingPage({ loading }) {
   return (
@@ -9,7 +8,5 @@ export default function LoadingPage({ loading }) {
         <BarLoader width={200} loading={loading} color="#00B074" />
       </div>
     </div>
-  );
+  )
 }
-
-  

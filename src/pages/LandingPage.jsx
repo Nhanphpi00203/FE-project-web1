@@ -4,11 +4,9 @@ const LandingPage = () => {
   return (
     <div>
       {/* <Homepages /> */}
-      <div>
-        HI
-      </div>
+      <div className="text-[30px]">HI</div>
     </div>
-  );
-};
+  )
+}
 
-export default LandingPage;
+export default LandingPage
