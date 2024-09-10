@@ -3,7 +3,7 @@ import { useState } from "react"
 const MyAccount = () => {
     const [isregister, setIsregister] = useState(true)
     return (
-        <div className="container mx-auto flex justify-center items-center py-[100px]">
+        <div className="container mx-auto flex justify-center items-center py-[10px] md:py-[100px]">
             <div className="w-[500px] mx-auto h-[500px]">
                 <h1 className="text-[25px] text-center mx-auto md:text-[35px]">My account</h1>
                 <div className=" text-center h-[50px] my-[50px] w-[400px] md:w-[500px] bg-[#EFEFEF] rounded flex  mx-auto  md:justify-between items-center pl-1">

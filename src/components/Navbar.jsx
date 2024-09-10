@@ -34,21 +34,17 @@ const Navbar = () => {
 
                     </div>
                 </div>
-                <div className="  mt-[10px] container w-[auto] mx-auto flex justify-center">
-                    <div className="relative md:hidden flex">
-                        <input type="text" name="" id="" className="bg-gray-200 outline-none rounded text-[15px] pl-[35px]  w-[300px] h-[40px]" placeholder="Search" />
-                        <div className="absolute top-[12px]  left-[10px] "> <IoIosSearch size={20} /></div>
-                    </div>
+                <div className="relative md:hidden mt-[10px] container w-[full]  mx-auto flex justify-center">       
+                        <input type="text" name="" id="" className="bg-gray-200 outline-none rounded text-[15px] pl-[35px]  w-full h-[40px]" placeholder="Search" />
+                        <div className="absolute top-[10px]  left-[10px] "> <IoIosSearch size={20} /></div>
                 </div>
                 <ul className={!navbar ? ' pt-1  p-4 block  left-0 top-[130px]   w-[100%]    border-r-gray-900  ease-in-out duration-200' : 'hidden left-[-100%] '}>
-
                     <li className=" p-2 mt-[40px]"><Link to="/Shop">Home</Link></li>
                     <li className=" p-2"><Link to="/Blog">Shop</Link></li>
                     <li className=" p-2"><Link to="/Blog">About</Link></li>
                     <li className=" p-2"><Link to="/Blog">Blog</Link></li>
                     <li className=" p-2"><Link to="/Blog">Help</Link></li>
                     <li className=" p-2 "><Link to="/Blog">Contact</Link></li>
-
                     <div className="flex items-center space-x-2 pt-4 border-t-2 border-solid border-[#D8D8D8]">
                         <CiUser size={30} />
                         <p>My account</p>
