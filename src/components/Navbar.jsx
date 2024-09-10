@@ -36,7 +36,7 @@ const Navbar = () => {
                 </div>
                 <div className="  mt-[10px] container w-[auto] mx-auto flex justify-center">
                     <div className="relative md:hidden flex">
-                        <input type="text" name="" id="" className="bg-gray-200 outline-none rounded text-[15px] pl-[35px]  w-[400px] h-[40px]" placeholder="Search" />
+                        <input type="text" name="" id="" className="bg-gray-200 outline-none rounded text-[15px] pl-[35px]  w-[300px] h-[40px]" placeholder="Search" />
                         <div className="absolute top-[12px]  left-[10px] "> <IoIosSearch size={20} /></div>
                     </div>
                 </div>
