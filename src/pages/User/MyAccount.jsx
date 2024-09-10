@@ -39,7 +39,7 @@ const MyAccount = () => {
                     <button type="submit" className=" rounded flex justify-center items-center  w-[400px] md:w-[500px] h-[50px] mt-[50px] bg-black text-white text-[17px]" >
                         SIGN IN
                     </button>
-                    <a className="flex justify-center text-[15px] mt-[10px]" href="#">Have you forgotten your password?</a>
+                    <a className="flex justify-center text-[15px] mt-[10px]" href="ForgotPass">Have you forgotten your password?</a>
                 </form>
                 :
                 <form className=" mx-auto w-[400px] md:w-[500px]">
@@ -51,7 +51,7 @@ const MyAccount = () => {
                     REGISTER
                 </button>
                 <a className="flex justify-center text-[15px] mt-[10px]" href="#">
-                    {isregister ? ' Have you forgotten your password?': <p onClick={()=>setIsregister(true)}>Already have an account?</p>}
+                    {isregister ? <a href="ForgotPass">Have you forgotten your password?</a>: <p onClick={()=>setIsregister(true)}>Already have an account?</p>}
                    </a>
             </form>
             }
