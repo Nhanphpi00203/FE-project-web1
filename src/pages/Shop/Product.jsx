@@ -62,14 +62,14 @@ const Product = () => {
               <img src={images[activeImage]} className="lg:w-[100%]  w-[600px] lg:h-[100%] h-[400px] rounded " alt="" />
               <div className="md:hidden block absolute top-[220px] left-0 ">
                 <button onClick={handlePrevious} className="top-0  py-2 px-4 rounded-l">
-                 <FaChevronLeft/>
+                  <FaChevronLeft />
                 </button>
               </div>
 
-              <div className="md:hidden  block absolute top-[220px] right-0"> 
+              <div className="md:hidden  block absolute top-[220px] right-0">
                 <button onClick={handleNext} className=" py-2 px-4 rounded-r">
-                <FaChevronRight/>
-              </button>
+                  <FaChevronRight />
+                </button>
               </div>
             </div >
 
@@ -229,19 +229,19 @@ const Product = () => {
               </div>
               <button className="uppercase w-[100%] h-[40px] border-solid border-2 rounded-sm text-[18px] hover:text-white md:block hidden hover:bg-black"> add to cart</button>
             </div>
-            <div className="md:flex hidden">
+            <div className="md:block hidden">
               <div className="pt-[40px]  space-x-2 text-[24px] flex items-center ">
                 <IoHeartOutline />
                 <p className="text-gray-400 w-[30px] text-center">|</p>
-
                 <CgMail />
                 <FaFacebookF />
                 <FaInstagram />
                 <FaTwitter />
-
-              </div>
+              </div>     
+              <div className="mt-[40px]">
               <h4 className="text-[14px] flex">SKU: <p className="pl-1 text-gray-400">12</p></h4>
-              <h4 className="text-[14px] flex ">Categories: <p className="pl-1 text-gray-400">Fashion, Style</p></h4>
+              <h4 className="text-[14px] flex ">Categories: <p className="pl-1 text-gray-400">Fashion, Style</p></h4> 
+              </div>
             </div>
           </div>
           {/*  */}
