@@ -1,7 +1,7 @@
 import { Button } from 'react-daisyui'
 const Pages404 = () => {
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-gray-100 p-4 sm:p-6 md:p-8 lg:p-10">
+    <div className="w-full h-screen flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10">
       <div className="w-full max-w-md p-6">
         <div className="text-[24px] sm:text-[30px] md:text-[33px] font-bold text-center mb-4">
           404 ERROR

@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 const LandingPage = lazy(() => import('../pages/LandingPage'))
-//MyAccount 
+//MyAccount
 const MyAccount = lazy(() => import('../pages/User/myAccount'))
 const ForgotPass = lazy(() => import('../pages/User/ForgotPass'))
 //
@@ -21,10 +21,11 @@ export default function AppRoutes() {
       <Routes>
         <Route index path="/" element={<LandingPage />} />
         <Route path="*" element={<Pages404 />} />
+        {/* Blog */}
         <Route path="/Blog" element={<Blog />} />
 
-         {/* MyAccount */}
-         <Route path="/sign-in" element={<MyAccount />} />
+        {/* MyAccount */}
+        <Route path="/sign-in" element={<MyAccount />} />
         <Route path="/ForgotPass" element={<ForgotPass />} />
         {/*-----------*/}
 

@@ -1,21 +1,25 @@
-import { IoSearch } from 'react-icons/io5'
+// import { IoSearch } from 'react-icons/io5'
+import Sreach from './sreach'
+import News from './News'
+// import NewsMoblie from './NewsMoblie'
 const Blog = () => {
   return (
-    <div>
-      <div className="w-full h-screen">
-        <div className="ml-[14px] mt-[70px]">
-          <div className="text-[33px]">
-            <p>Blog</p>
-          </div>
-          <div className="w-[261px] h-[35px] relative">
-            <input
-              type="text"
-              placeholder="sreach"
-              className="border border-solid border-black focus:outline-none"
-            />
-            <IoSearch className="absolute left-[150px] top-[4px] text-xl text-gray-500" />
-          </div>
+    <div className="w-full h-full lg:flex lg:justify-center">
+      <div className="">
+        <div className="text-[33px] ml-[10px] mt-[20px] sm:mt-[30px] md:mt-[40px]">
+          <p>Blog</p>
         </div>
+
+        <div className="hidden md:block">
+          <Sreach />
+        </div>
+      </div>
+      <div className=" mt-[20px] sm:mt-32">
+        <News />
+
+        {/* <div>
+          <NewsMoblie />
+        </div> */}
       </div>
     </div>
   )
