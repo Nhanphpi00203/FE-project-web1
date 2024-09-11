@@ -120,7 +120,7 @@ const Product = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis. Nunc sed porta augue. Morbi porta tempor odio, in molestie diam bibendum sed.
                       </div> : <div className="hidden"> </div>
                     }</div>
-                  <b className="ml-2 absolute top-1 left-12 ">{tabMoblieD ? <FaChevronUp /> : <FaChevronDown />}</b></p>
+                  <b className="ml-2 absolute top-1 left-[80px] ">{tabMoblieD ? <FaChevronUp /> : <FaChevronDown />}</b></p>
                 <p className="cursor-pointer relative" onClick={() => setTabmobileA(!tabMoblieA)}>
 
                   Aditional information
