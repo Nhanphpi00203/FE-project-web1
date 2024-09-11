@@ -9,6 +9,8 @@ import { FaTwitter } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import { FaChevronUp } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
 import DefaultImg from "../../assets/navbar-footer-image/Image_none.png"
 const Product = () => {
   const [rating, setRating] = useState(null);
@@ -19,15 +21,21 @@ const Product = () => {
   const [tabMoblieD, setTabmobileD] = useState(false)
   const [tabMoblieA, setTabmobileA] = useState(false)
   const [tabMoblieR, setTabmobileR] = useState(false)
-  const [images] = useState({
-    img1: "https://thuvienmeme.com/wp-content/uploads/2024/05/meo-chi-tay-cuoi-ha-ha-vao-mat-ban.jpg",
-    img2: "https://thuvienmeme.com/wp-content/uploads/2023/08/meo-con-chu-mo-noi-xin-chao.jpg",
-    img3: "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a1527598-cee3-49f7-ad27-b7ad6211ba9d/width=450/2481699.jpeg",
-    img4: "https://image.lag.vn/upload/news/23/11/28/meme-josh-hutcherson-la-gi-2_EJFZ.jpg"
-  })
+  const handleNext = () => {
+    setactiveImage((prevIndex) => (prevIndex + 1) % images.length);
+  };
+  const handlePrevious = () => {
+    setactiveImage((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+  const images = [
+    "https://thuvienmeme.com/wp-content/uploads/2024/05/meo-chi-tay-cuoi-ha-ha-vao-mat-ban.jpg",
+    "https://thuvienmeme.com/wp-content/uploads/2023/08/meo-con-chu-mo-noi-xin-chao.jpg",
+    "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a1527598-cee3-49f7-ad27-b7ad6211ba9d/width=450/2481699.jpeg",
+    "https://image.lag.vn/upload/news/23/11/28/meme-josh-hutcherson-la-gi-2_EJFZ.jpg"
+  ]
+    ;
 
-
-  const [activeImage, setactiveImage] = useState(images.img1)
+  const [activeImage, setactiveImage] = useState(0)
   return (
     <div>
       <div className="container  mx-auto h-[fit] w-full md:mt-[50px]">
@@ -38,13 +46,31 @@ const Product = () => {
           {/* image */}
           <div className="mx-auto w-[full]  md:w-[60%] h-full flex md:pace-x-2 md:p-2">
             <div className="md:w-[30%] w-full h-full  flex-col p-2 space-y-2 md:block hidden ">
-              <img src={images.img1} className="w-[90%] h-[20%] lg:h-[130px] rounded" alt="" onClick={() => setactiveImage(images.img1)} />
-              <img src={images.img2} className="w-[90%] h-[20%] lg:h-[130px] rounded" alt="" onClick={() => setactiveImage(images.img2)} />
-              <img src={images.img3} className="w-[90%] h-[20%] lg:h-[130px] rounded" alt="" onClick={() => setactiveImage(images.img3)} />
-              <img src={images.img4} className="w-[90%] h-[20%] lg:h-[130px] rounded" alt="" onClick={() => setactiveImage(images.img4)} />
+              {images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Thumbnail ${index + 1}`}
+                  onClick={() => setactiveImage(index)}
+                  className={`w-[90%] h-[20%] lg:h-[130px] rounded ${activeImage === index ? 'border-blue-500' : 'border-transparent'
+                    }`}
+                />
+              ))}
+
             </div >
-            <div className="w-[100%] h-full">
-              <img src={activeImage} className="lg:w-[100%]   mr-[0px] lg:h-[100%] rounded " alt="" />
+            <div className="w-[100%] relative md:h-[550px] h-[full]">
+              <img src={images[activeImage]} className="lg:w-[100%]  w-[600px] lg:h-[100%] h-[400px] rounded " alt="" />
+              <div className="md:hidden block absolute top-[220px] left-0 ">
+                <button onClick={handlePrevious} className="top-0  py-2 px-4 rounded-l">
+                  <FaChevronLeft />
+                </button>
+              </div>
+
+              <div className="md:hidden  block absolute top-[220px] right-0">
+                <button onClick={handleNext} className=" py-2 px-4 rounded-r">
+                  <FaChevronRight />
+                </button>
+              </div>
             </div >
 
           </div>
@@ -94,7 +120,7 @@ const Product = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis. Nunc sed porta augue. Morbi porta tempor odio, in molestie diam bibendum sed.
                       </div> : <div className="hidden"> </div>
                     }</div>
-                  <b className="ml-2 absolute top-1 left-12 ">{tabMoblieD ? <FaChevronUp /> : <FaChevronDown />}</b></p>
+                  <b className="ml-2 absolute top-1 left-[80px] ">{tabMoblieD ? <FaChevronUp /> : <FaChevronDown />}</b></p>
                 <p className="cursor-pointer relative" onClick={() => setTabmobileA(!tabMoblieA)}>
 
                   Aditional information
@@ -117,9 +143,9 @@ const Product = () => {
                       </div> : <div className="hidden"> </div>
                     }
                   </div>
-                  <b className="ml-2 absolute top-1 left-[145px] ">{tabMoblieA ?<FaChevronUp /> : <FaChevronDown />}</b>  </p>
+                  <b className="ml-2 absolute top-1 left-[145px] ">{tabMoblieA ? <FaChevronUp /> : <FaChevronDown />}</b>  </p>
                 <p className="cursor-pointer relative" >
-                 <div onClick={() => setTabmobileR(!tabMoblieR)}> Reviews(0)</div>
+                  <div onClick={() => setTabmobileR(!tabMoblieR)}> Reviews(0)</div>
                   {/* 3 */}
                   {
                     tabMoblieR ? <div className="flex p-4 justify-between">
@@ -203,20 +229,20 @@ const Product = () => {
               </div>
               <button className="uppercase w-[100%] h-[40px] border-solid border-2 rounded-sm text-[18px] hover:text-white md:block hidden hover:bg-black"> add to cart</button>
             </div>
-           <div className="md:flex hidden">
-           <div className="pt-[40px]  space-x-2 text-[24px] items-center ">
-              <IoHeartOutline />
-              <p className="text-gray-400 w-[30px] text-center">|</p>
-
-              <CgMail />
-              <FaFacebookF />
-              <FaInstagram />
-              <FaTwitter />
-
+            <div className="md:block hidden">
+              <div className="pt-[40px]  space-x-2 text-[24px] flex items-center ">
+                <IoHeartOutline />
+                <p className="text-gray-400 w-[30px] text-center">|</p>
+                <CgMail />
+                <FaFacebookF />
+                <FaInstagram />
+                <FaTwitter />
+              </div>     
+              <div className="mt-[40px]">
+              <h4 className="text-[14px] flex">SKU: <p className="pl-1 text-gray-400">12</p></h4>
+              <h4 className="text-[14px] flex ">Categories: <p className="pl-1 text-gray-400">Fashion, Style</p></h4> 
+              </div>
             </div>
-            <h4 className="text-[14px] flex">SKU: <p className="pl-1 text-gray-400">12</p></h4>
-            <h4 className="text-[14px] flex ">Categories: <p className="pl-1 text-gray-400">Fashion, Style</p></h4>
-           </div>
           </div>
           {/*  */}
 
@@ -343,9 +369,9 @@ const Product = () => {
           </div>
         </div>
         {/*  */}
-          <p className="text-[16px] text-[#A18A68] w-full flex justify-between px-4  pb-[100px]">
-            Continue shopping <div className="text-[20px]">{">"}</div>
-          </p>
+        <p className="text-[16px] text-[#A18A68] w-full flex justify-between px-4  pb-[100px]">
+          Continue shopping <div className="text-[20px]">{">"}</div>
+        </p>
       </div>
     </div>
   )
