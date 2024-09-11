@@ -5,26 +5,24 @@ import { MdOutlineCancel } from 'react-icons/md'
 import { useState } from 'react'
 
 const Shop = () => {
-  const [range, setRange] = useState(0)
-  const [isOn, setIsOn] = useState(false)
-  const [isOn1, setIsOn1] = useState(false)
-  const [filter, setFilter] = useState(true)
-  const handleFilter = () => {
-    setFilter(!filter)
-  }
-  const handleToggle = () => {
-    setIsOn(!isOn)
-  }
-  const handleToggle1 = () => {
-    setIsOn1(!isOn1)
-  }
-  return (
-    <div>
-      <div className="p-4  container mx-auto w-full h-[fit] md:flex  justify-between  md:mt-[50px]">
-        {/* filter */}
-        <p className="capitalize md:text-[30px] md:hidden block text-[25px]">
-          shop
-        </p>
+    const [range, setRange] = useState(0)
+    const [isOn, setIsOn] = useState(false);
+    const [isOn1, setIsOn1] = useState(false);
+    const [filter, setFilter] = useState(false);
+    const handleFilter = () => {
+        setFilter(!filter)
+    }
+    const handleToggle = () => {
+        setIsOn(!isOn);
+    };
+    const handleToggle1 = () => {
+        setIsOn1(!isOn1);
+    };
+    return (
+        <div>
+            <div className="p-4  container mx-auto w-full h-[fit] md:flex  justify-between  md:mt-[50px]">
+                {/* filter */}
+                <p className="capitalize md:text-[30px] md:hidden block text-[25px]">shop</p>
 
         <div className=" w-0  md:w-[25%] flex-col md:flex hidden ">
           <p className="capitalize md:text-[30px] md:block hidden text-[25px]">
