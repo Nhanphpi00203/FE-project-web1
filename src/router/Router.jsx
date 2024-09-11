@@ -21,10 +21,11 @@ export default function AppRoutes() {
       <Routes>
         <Route index path="/" element={<LandingPage />} />
         <Route path="*" element={<Pages404 />} />
+        {/* Blog */}
         <Route path="/Blog" element={<Blog />} />
 
-         {/* MyAccount */}
-         <Route path="/sign-in" element={<MyAccount />} />
+        {/* MyAccount */}
+        <Route path="/sign-in" element={<MyAccount />} />
         <Route path="/ForgotPass" element={<ForgotPass />} />
         {/*-----------*/}
 
