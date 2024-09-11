@@ -8,7 +8,7 @@ const Shop = () => {
     const [range, setRange] = useState(0)
     const [isOn, setIsOn] = useState(false);
     const [isOn1, setIsOn1] = useState(false);
-    const [filter, setFilter] = useState(true);
+    const [filter, setFilter] = useState(false);
     const handleFilter = () => {
         setFilter(!filter)
     }
