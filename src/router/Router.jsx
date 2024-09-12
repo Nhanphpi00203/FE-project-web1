@@ -14,7 +14,8 @@ const Product = lazy(() => import('../pages/Shop/Product'))
 //
 const Pages404 = lazy(() => import('../pages/404/Pages404'))
 const Blog = lazy(() => import('../pages/Blog/Blog'))
-const SingleBlog = lazy(() => import('../pages/Blog/Blog-Single-NoSidebar'))
+const NoSidebar = lazy(() => import('../pages/Blog/Blog-Single-NoSidebar'))
+
 export default function AppRoutes() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -24,7 +25,8 @@ export default function AppRoutes() {
         <Route path="*" element={<Pages404 />} />
         {/* Blog */}
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blogSingle" element={<SingleBlog />} />
+        {/* Blog-Single-NoSidebar */}
+        <Route path="/blogSingle" element={<NoSidebar />} />
 
         {/* MyAccount */}
         <Route path="/sign-in" element={<MyAccount />} />
