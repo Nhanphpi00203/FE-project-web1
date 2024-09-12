@@ -6,6 +6,7 @@ const LandingPage = lazy(() => import('../pages/LandingPage'))
 //MyAccount
 const MyAccount = lazy(() => import('../pages/User/myAccount'))
 const ForgotPass = lazy(() => import('../pages/User/ForgotPass'))
+const Account =  lazy(() => import('../pages/Account/Account'))
 //
 
 //Shop
@@ -29,6 +30,7 @@ export default function AppRoutes() {
         {/* MyAccount */}
         <Route path="/sign-in" element={<MyAccount />} />
         <Route path="/ForgotPass" element={<ForgotPass />} />
+        <Route path="/Account" element={<Account />} />
         {/*-----------*/}
 
         {/* Shop */}
