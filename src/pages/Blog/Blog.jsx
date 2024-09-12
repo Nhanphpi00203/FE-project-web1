@@ -1,6 +1,6 @@
 // import { IoSearch } from 'react-icons/io5'
-import Sreach from './sreach'
-import News from './News'
+import Sreach from '../../components/BLog/sreach'
+import News from '../../components/BLog/News'
 // import NewsMoblie from './NewsMoblie'
 const Blog = () => {
   return (
