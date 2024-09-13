@@ -6,11 +6,11 @@ const Blog = () => {
   return (
     <div className="w-full h-full lg:flex lg:justify-center">
       <div className="">
-        <div className="text-[33px] ml-[10px] mt-[20px] sm:mt-[30px] md:mt-[40px]">
+        <div className="text-[33px] ml-[10px] mt-[20px] sm:mt-[30px] md:mt-[40px] text-center">
           <p>Blog</p>
         </div>
 
-        <div className="hidden md:block">
+        <div className="">
           <Sreach />
         </div>
       </div>
