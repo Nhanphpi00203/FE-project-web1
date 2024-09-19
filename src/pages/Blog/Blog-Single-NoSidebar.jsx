@@ -9,7 +9,7 @@ import { Checkbox } from 'react-daisyui'
 import { useState } from 'react'
 import { Avartar } from '../../assets/Blog'
 import { RiReplyFill } from 'react-icons/ri'
-const SingleBlog = () => {
+const NoSidebar = () => {
   const [isClicked, setIsClicked] = useState(false)
 
   const handleMouseDown = () => {
@@ -159,7 +159,7 @@ const SingleBlog = () => {
               className="border-b border-solid border-[#D8D8D8] focus:outline-none w-[261px] h-[35px] sm:w-[670px] sm:pr-10"
             />
             <br />
-            <div className="mt-5">
+            <div className="mt-10">
               {/* <Button className="mt-5 w-[158px] h-[48px] border border-solid border-black rounded-lg hover:bg-gray-300 transition-all duration-300 hover:scale-105">
                 POST COMMENT
               </Button> */}
@@ -179,7 +179,7 @@ const SingleBlog = () => {
         </div>
       </div>
       {/*  */}
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-14">
         <div className="w-[670px]">
           <p className="text-[26px]">Comments(?)</p>
           <div className="w-[376px] h-[64px] mt-[20px] flex items-center">
@@ -208,4 +208,4 @@ const SingleBlog = () => {
     </div>
   )
 }
-export default SingleBlog
+export default NoSidebar
