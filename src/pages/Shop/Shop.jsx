@@ -5,24 +5,24 @@ import { MdOutlineCancel } from 'react-icons/md'
 import { useState } from 'react'
 
 const Shop = () => {
-    const [range, setRange] = useState(0)
-    const [isOn, setIsOn] = useState(false);
-    const [isOn1, setIsOn1] = useState(false);
-    const [filter, setFilter] = useState(false);
-    const handleFilter = () => {
-        setFilter(!filter)
-    }
-    const handleToggle = () => {
-        setIsOn(!isOn);
-    };
-    const handleToggle1 = () => {
-        setIsOn1(!isOn1);
-    };
-    return (
-        <div>
-            <div className="p-4  container mx-auto w-full h-[fit] md:flex  justify-between  md:mt-[50px]">
-                {/* filter */}
-                <p className="capitalize md:text-[30px] md:hidden block text-[25px]">shop</p>
+  const [range, setRange] = useState(0)
+  const [isOn, setIsOn] = useState(false);
+  const [isOn1, setIsOn1] = useState(false);
+  const [filter, setFilter] = useState(false);
+  const handleFilter = () => {
+    setFilter(!filter)
+  }
+  const handleToggle = () => {
+    setIsOn(!isOn);
+  };
+  const handleToggle1 = () => {
+    setIsOn1(!isOn1);
+  };
+  return (
+    <div>
+      <div className="p-4  container mx-auto w-full h-[fit] md:flex  justify-between  md:mt-[50px]">
+        {/* filter */}
+        <p className="capitalize md:text-[30px] md:hidden block text-[25px]">shop</p>
 
         <div className=" w-0  md:w-[25%] flex-col md:flex hidden ">
           <p className="capitalize md:text-[30px] md:block hidden text-[25px]">
@@ -70,14 +70,12 @@ const Shop = () => {
               <span className="text-[18px]">On sale</span>
               <div
                 onClick={handleToggle}
-                className={`w-10 h-5 flex items-center bg-gray-400 rounded-full p-1 cursor-pointer transition-colors ${
-                  isOn ? 'bg-green-500' : 'bg-gray-400'
-                }`}
+                className={`w-10 h-5 flex items-center bg-gray-400 rounded-full p-1 cursor-pointer transition-colors ${isOn ? 'bg-green-500' : 'bg-gray-400'
+                  }`}
               >
                 <div
-                  className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
-                    isOn ? 'translate-x-6' : 'translate-x-0'
-                  }`}
+                  className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${isOn ? 'translate-x-6' : 'translate-x-0'
+                    }`}
                 ></div>
               </div>
             </div>
@@ -86,14 +84,12 @@ const Shop = () => {
               <span className="text-[18px]">On stock</span>
               <div
                 onClick={handleToggle1}
-                className={`w-10 h-5 flex items-center bg-gray-400 rounded-full p-1 cursor-pointer transition-colors ${
-                  isOn1 ? 'bg-green-500' : 'bg-gray-400'
-                }`}
+                className={`w-10 h-5 flex items-center bg-gray-400 rounded-full p-1 cursor-pointer transition-colors ${isOn1 ? 'bg-green-500' : 'bg-gray-400'
+                  }`}
               >
                 <div
-                  className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
-                    isOn1 ? 'translate-x-6' : 'translate-x-0'
-                  }`}
+                  className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${isOn1 ? 'translate-x-6' : 'translate-x-0'
+                    }`}
                 ></div>
               </div>
             </div>
@@ -150,14 +146,12 @@ const Shop = () => {
             <span className="text-[18px]">On sale</span>
             <div
               onClick={handleToggle}
-              className={`w-10 h-5 flex items-center bg-gray-400 rounded-full p-1 cursor-pointer transition-colors ${
-                isOn ? 'bg-green-500' : 'bg-gray-400'
-              }`}
+              className={`w-10 h-5 flex items-center bg-gray-400 rounded-full p-1 cursor-pointer transition-colors ${isOn ? 'bg-green-500' : 'bg-gray-400'
+                }`}
             >
               <div
-                className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
-                  isOn ? 'translate-x-6' : 'translate-x-0'
-                }`}
+                className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${isOn ? 'translate-x-6' : 'translate-x-0'
+                  }`}
               ></div>
             </div>
           </div>
@@ -166,14 +160,12 @@ const Shop = () => {
             <span className="text-[18px]">On stock</span>
             <div
               onClick={handleToggle1}
-              className={`w-10 h-5 flex items-center bg-gray-400 rounded-full p-1 cursor-pointer transition-colors ${
-                isOn1 ? 'bg-green-500' : 'bg-gray-400'
-              }`}
+              className={`w-10 h-5 flex items-center bg-gray-400 rounded-full p-1 cursor-pointer transition-colors ${isOn1 ? 'bg-green-500' : 'bg-gray-400'
+                }`}
             >
               <div
-                className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
-                  isOn1 ? 'translate-x-6' : 'translate-x-0'
-                }`}
+                className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${isOn1 ? 'translate-x-6' : 'translate-x-0'
+                  }`}
               ></div>
             </div>
           </div>
