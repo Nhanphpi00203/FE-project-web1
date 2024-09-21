@@ -28,16 +28,16 @@ const Navbar = () => {
                         <IoCartOutline onClick={() => setShoppingBag(!ShoppingBag)} />
                         <CiUser />
                     </ul>
-                    <div className=" md:hidden  flex space-x-7 justify-end cursor-pointer">
-                        <IoCartOutline onClick={() => setShoppingBag(!ShoppingBag)} />
-                        <div onClick={() => setnavbar(!navbar)}>
-                            {!navbar ? <MdOutlineCancel /> : <CiMenuBurger />}
-                        </div>
+
+                    <div onClick={handleNavbar} className=" md:hidden  w-[100px] flex justify-between">
+                        {!navbar ? <IoCartOutline /> : null}
+                        {!navbar ? <MdOutlineCancel /> : <div className=" w-[100px] flex justify-end"><CiMenuBurger /></div>}
                     </div>
                 </div>
                 <div className="relative md:hidden mt-[10px] container w-[full]  mx-auto flex justify-center">
-                    <input type="text" name="" id="" className="bg-gray-200 outline-none rounded text-[15px] pl-[35px]  w-full h-[40px]" placeholder="Search" />
-                    <div className="absolute top-[10px]  left-[10px] "> <IoIosSearch size={20} /></div>
+                        <input type="text" name="" id="" className="bg-gray-200 outline-none rounded text-[15px] pl-[35px]  w-full h-[40px]" placeholder="Search" />
+                        <div className="absolute top-[10px]  left-[10px] "> <IoIosSearch size={20} /></div>
+
                 </div>
                 <ul className={!navbar ? ' pt-1  p-4 block  left-0 top-[130px]   w-[100%] text-[16px]   border-r-gray-900  ease-in-out duration-200' : 'hidden left-[-100%] '}>
                     <li className=" p-2 mt-[40px]"><Link to="/Shop">Home</Link></li>

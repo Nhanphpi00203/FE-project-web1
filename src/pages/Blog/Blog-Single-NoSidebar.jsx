@@ -9,6 +9,7 @@ import { Checkbox } from 'react-daisyui'
 import { useState } from 'react'
 import { Avartar } from '../../assets/Blog'
 import { RiReplyFill } from 'react-icons/ri'
+// import Sreach from '../../components/BLog/sreach'
 const NoSidebar = () => {
   const [isClicked, setIsClicked] = useState(false)
 
@@ -22,7 +23,7 @@ const NoSidebar = () => {
   return (
     <div className="w-full h-full">
       <div>
-        <p className="text-[30px] mt-10 text-center sm:text-[33px] sm:mt-0">
+        <p className="text-[30px] mt-10 text-center sm:text-[30px] sm:mt-0">
           Fast Fashion, And Faster Fashion
         </p>
 
@@ -37,7 +38,7 @@ const NoSidebar = () => {
         <img
           src={BannerBig}
           alt=""
-          className="w-[288px] h-[192px] sm:w-[1248px] sm:h-[646px] object-cover rounded-lg"
+          className="w-[288px] h-[192px] sm:w-[947px] sm:h-[489.93px] object-cover rounded-lg"
         />
       </div>
       {/*  */}
@@ -90,7 +91,7 @@ const NoSidebar = () => {
       </div>
       {/*  */}
       <div className="md:flex items-center justify-between p-5 sm:ml-[0px] ml-[24px]">
-        <div className="flex items-center sm:flex md:ml-[400px]">
+        <div className="flex items-center sm:flex md:ml-[110px]">
           <p className="text-[12px] sm:text-[16px]">Tags</p>
           <span className="mr-2"></span>
           <div className="border-b border-solid border-black w-[100px]"></div>
@@ -100,7 +101,7 @@ const NoSidebar = () => {
           </p>
         </div>
         {/*  */}
-        <div className="flex items-center space-x-1 md:mr-[400px] sm:mt-0 mt-7">
+        <div className="flex items-center space-x-1 md:mr-[110px] sm:mt-0 mt-7">
           <p className="text-[12px] sm:text-[16px]">Share</p>
           <span className="mr-2"></span>
           <div className="border-b border-solid border-black w-[100px]"></div>
@@ -179,28 +180,32 @@ const NoSidebar = () => {
         </div>
       </div>
       {/*  */}
-      <div className="flex justify-center mt-14">
-        <div className="w-[670px]">
-          <p className="text-[26px]">Comments(?)</p>
-          <div className="w-[376px] h-[64px] mt-[20px] flex items-center">
-            <div className="flex items-center gap-5">
-              <img src={Avartar} alt="" />
-              <div>
-                <div className="flex items-center gap-5">
-                  <p className="text-[16px] text-black font-poppins font-semibold">
-                    Robert Fox
-                  </p>
-                  <p className="text-gray-500 text-[14px]">6 May, 2020</p>
-                  <div className="flex items-center ml-auto">
-                    <RiReplyFill />
-                    <p className="text-gray-500 cursor-pointer">Reply</p>
-                  </div>
-                </div>
-                <p className="text-[16px] font-poppins text-gray-500 w-[670px] mt-2">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet.
+      <div className="flex flex-col items-center mt-14 px-4">
+        <div className="w-full max-w-[670px]">
+          <p className="text-[26px]">Comments</p>
+          <div className="w-full mt-4 flex sm:flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <img
+              src={Avartar}
+              alt="Avatar"
+              className="w-[70px] h-[70px] object-cover rounded-full"
+            />
+            <div className="flex-1">
+              <div className="flex items-center gap-4">
+                <p className="text-[16px] text-black font-poppins font-semibold">
+                  Robert Fox
                 </p>
+                <p className="text-gray-500 text-[14px]">6 May, 2020</p>
+                <div className="flex items-center ml-auto">
+                  <RiReplyFill />
+                  <p className="text-gray-500 cursor-pointer text-[14px] ml-1">
+                    Reply
+                  </p>
+                </div>
               </div>
+              <p className="text-[12px] font-poppins text-gray-500 mt-2 sm:text-[16px]">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet.
+              </p>
             </div>
           </div>
         </div>
