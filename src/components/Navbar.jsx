@@ -31,10 +31,9 @@ const Navbar = () => {
                     <div onClick={handleNavbar} className=" md:hidden  w-[100px] flex justify-between">
                         {!navbar ? <IoCartOutline /> : null}
                         {!navbar ? <MdOutlineCancel /> : <div className=" w-[100px] flex justify-end"><CiMenuBurger /></div>}
-
                     </div>
                 </div>
-                <div className="relative md:hidden mt-[10px] container w-[full]  mx-auto flex justify-center">       
+                <div className="relative md:hidden mt-[10px] container w-[full]  mx-auto flex justify-center">
                         <input type="text" name="" id="" className="bg-gray-200 outline-none rounded text-[15px] pl-[35px]  w-full h-[40px]" placeholder="Search" />
                         <div className="absolute top-[10px]  left-[10px] "> <IoIosSearch size={20} /></div>
                 </div>

@@ -10,7 +10,7 @@ const Blog = () => {
           <p>Blog</p>
         </div>
 
-        <div className="hidden md:block">
+        <div className="">
           <Sreach />
         </div>
       </div>

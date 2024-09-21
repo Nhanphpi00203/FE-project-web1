@@ -6,7 +6,7 @@ const LandingPage = lazy(() => import('../pages/LandingPage'))
 //MyAccount
 const MyAccount = lazy(() => import('../pages/User/myAccount'))
 const ForgotPass = lazy(() => import('../pages/User/ForgotPass'))
-const Account =  lazy(() => import('../pages/Account/Account'))
+const Account = lazy(() => import('../pages/Account/Account'))
 //
 
 //Shop
@@ -16,6 +16,8 @@ const Product = lazy(() => import('../pages/Shop/Product'))
 const Pages404 = lazy(() => import('../pages/404/Pages404'))
 const Blog = lazy(() => import('../pages/Blog/Blog'))
 const NoSidebar = lazy(() => import('../pages/Blog/Blog-Single-NoSidebar'))
+const BlogSidebar = lazy(() => import('../pages/Blog/Blog-Single-Sidebar'))
+const Admin = lazy(() => import('../pages/Admin/Admin'))
 
 export default function AppRoutes() {
   return (
@@ -24,10 +26,13 @@ export default function AppRoutes() {
       <Routes>
         <Route index path="/" element={<LandingPage />} />
         <Route path="*" element={<Pages404 />} />
+        <Route path="/admin" element={<Admin />} />
+
         {/* Blog */}
         <Route path="/blog" element={<Blog />} />
         {/* Blog-Single-NoSidebar */}
         <Route path="/blogSingle" element={<NoSidebar />} />
+        <Route path="/blogSidebar" element={<BlogSidebar />} />
 
         {/* MyAccount */}
         <Route path="/sign-in" element={<MyAccount />} />
